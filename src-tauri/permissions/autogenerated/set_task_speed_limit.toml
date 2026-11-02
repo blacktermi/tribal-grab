@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-task-speed-limit"
+description = "Enables the set_task_speed_limit command without any pre-configured scope."
+commands.allow = ["set_task_speed_limit"]
+
+[[permission]]
+identifier = "deny-set-task-speed-limit"
+description = "Denies the set_task_speed_limit command without any pre-configured scope."
+commands.deny = ["set_task_speed_limit"]

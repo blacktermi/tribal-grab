@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Options de Tribal Grab</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 13px/1.45 -apple-system, system-ui, sans-serif; margin: 16px; min-width: 300px; }
+    label { display: flex; gap: 8px; align-items: flex-start; }
+    p { color: GrayText; margin: 8px 0 0 24px; }
+  </style>
+</head>
+<body>
+  <label><input type="checkbox" id="takeOver" /> <span>Confier les téléchargements de Chrome à Tribal Grab</span></label>
+  <p>Tribal Grab doit être installé. Un téléchargement qui exige une session ouverte sur un site peut échouer : désactive alors cette option le temps de le lancer depuis Chrome.</p>
+  <br />
+  <label><input type="checkbox" id="closeTab" /> <span>Fermer l'onglet après l'envoi</span></label>
+  <p>Utile pour les pages de lecture : l'onglet se ferme dès que le lien est transmis à Tribal Grab.</p>
+  <script src="options.js"></script>
+</body>
+</html>

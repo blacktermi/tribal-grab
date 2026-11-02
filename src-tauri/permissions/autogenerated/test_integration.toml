@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-test-integration"
+description = "Enables the test_integration command without any pre-configured scope."
+commands.allow = ["test_integration"]
+
+[[permission]]
+identifier = "deny-test-integration"
+description = "Denies the test_integration command without any pre-configured scope."
+commands.deny = ["test_integration"]

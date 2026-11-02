@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-task-add-text"
+description = "Enables the task_add_text command without any pre-configured scope."
+commands.allow = ["task_add_text"]
+
+[[permission]]
+identifier = "deny-task-add-text"
+description = "Denies the task_add_text command without any pre-configured scope."
+commands.deny = ["task_add_text"]

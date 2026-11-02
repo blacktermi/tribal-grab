@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Tribal Grab",
+  "version": "0.1.0",
+  "identifier": "dev.tribalstudio.grab",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app"],
+    "category": "public.app-category.video",
+    "shortDescription": "Téléchargeur de vidéos et d'audio",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+    "resources": { "../extensions/chromium": "extension" },
+    "macOS": {
+      "minimumSystemVersion": "12.0",
+      "signingIdentity": "-"
+    },
+    "fileAssociations": [
+      { "ext": ["tgi"], "name": "Intégration Tribal Grab", "role": "Editor", "mimeType": "application/json" },
+      { "ext": ["tgpart"], "name": "Téléchargement partiel Tribal Grab", "role": "Editor" }
+    ]
+  }
+}

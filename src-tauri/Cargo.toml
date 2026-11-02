@@ -1,0 +1,28 @@
+[package]
+name = "tribal-grab"
+version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+edition.workspace = true
+description = "Tribal Grab : gestionnaire de téléchargement pour macOS"
+
+[lib]
+name = "tribal_grab_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+grab-core = { path = "../crates/grab-core" }
+tauri = { version = "2", features = ["tray-icon", "unstable", "image-png"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-single-instance = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+url = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

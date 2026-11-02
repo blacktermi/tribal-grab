@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-guided-layout"
+description = "Enables the guided_layout command without any pre-configured scope."
+commands.allow = ["guided_layout"]
+
+[[permission]]
+identifier = "deny-guided-layout"
+description = "Denies the guided_layout command without any pre-configured scope."
+commands.deny = ["guided_layout"]

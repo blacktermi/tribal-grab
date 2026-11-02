@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-history-import-file"
+description = "Enables the history_import_file command without any pre-configured scope."
+commands.allow = ["history_import_file"]
+
+[[permission]]
+identifier = "deny-history-import-file"
+description = "Denies the history_import_file command without any pre-configured scope."
+commands.deny = ["history_import_file"]

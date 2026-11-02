@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "guided-remote",
+  "description": "Pages web non fiables de l'extraction guidée et de la connexion : une seule commande, guided_report. Aucune permission core:*, aucun plugin.",
+  "remote": {
+    "urls": [
+      "https://*",
+      "https://*/*",
+      "https://*:*",
+      "https://*:*/*",
+      "http://*",
+      "http://*/*",
+      "http://*:*",
+      "http://*:*/*"
+    ]
+  },
+  "webviews": [
+    "browser-page"
+  ],
+  "permissions": [
+    "allow-guided-report"
+  ]
+}

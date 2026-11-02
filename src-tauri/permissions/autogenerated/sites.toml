@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-sites"
+description = "Enables the sites command without any pre-configured scope."
+commands.allow = ["sites"]
+
+[[permission]]
+identifier = "deny-sites"
+description = "Denies the sites command without any pre-configured scope."
+commands.deny = ["sites"]

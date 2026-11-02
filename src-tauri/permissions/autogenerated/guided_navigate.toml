@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-guided-navigate"
+description = "Enables the guided_navigate command without any pre-configured scope."
+commands.allow = ["guided_navigate"]
+
+[[permission]]
+identifier = "deny-guided-navigate"
+description = "Denies the guided_navigate command without any pre-configured scope."
+commands.deny = ["guided_navigate"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-history-redownload"
+description = "Enables the history_redownload command without any pre-configured scope."
+commands.allow = ["history_redownload"]
+
+[[permission]]
+identifier = "deny-history-redownload"
+description = "Denies the history_redownload command without any pre-configured scope."
+commands.deny = ["history_redownload"]

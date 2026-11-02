@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-login-save"
+description = "Enables the login_save command without any pre-configured scope."
+commands.allow = ["login_save"]
+
+[[permission]]
+identifier = "deny-login-save"
+description = "Denies the login_save command without any pre-configured scope."
+commands.deny = ["login_save"]

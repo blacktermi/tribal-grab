@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-guided-mute"
+description = "Enables the guided_mute command without any pre-configured scope."
+commands.allow = ["guided_mute"]
+
+[[permission]]
+identifier = "deny-guided-mute"
+description = "Denies the guided_mute command without any pre-configured scope."
+commands.deny = ["guided_mute"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-site-data-clear"
+description = "Enables the site_data_clear command without any pre-configured scope."
+commands.allow = ["site_data_clear"]
+
+[[permission]]
+identifier = "deny-site-data-clear"
+description = "Denies the site_data_clear command without any pre-configured scope."
+commands.deny = ["site_data_clear"]

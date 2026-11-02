@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-history-remove-missing"
+description = "Enables the history_remove_missing command without any pre-configured scope."
+commands.allow = ["history_remove_missing"]
+
+[[permission]]
+identifier = "deny-history-remove-missing"
+description = "Denies the history_remove_missing command without any pre-configured scope."
+commands.deny = ["history_remove_missing"]

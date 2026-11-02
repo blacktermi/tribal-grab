@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-remove-integration"
+description = "Enables the remove_integration command without any pre-configured scope."
+commands.allow = ["remove_integration"]
+
+[[permission]]
+identifier = "deny-remove-integration"
+description = "Denies the remove_integration command without any pre-configured scope."
+commands.deny = ["remove_integration"]

@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = ["crates/grab-core", "crates/grab-cli", "src-tauri"]
+
+[workspace.package]
+license = "MIT"
+authors = ["Tribal Studio"]
+repository = "https://github.com/blacktermi/tribal-grab"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = "none"
+
+# Sur cette version de macOS, `strip` (appliqué par défaut en release) produit des dylibs de macros
+# procédurales refusés par dlopen (« mis-aligned LINKEDIT string pool ») : on le désactive.
+[profile.release.build-override]
+opt-level = 0
+codegen-units = 16
+strip = "none"
