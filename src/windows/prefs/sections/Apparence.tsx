@@ -21,6 +21,12 @@ export default function Apparence() {
 
       <SettingGroup title="Dock et barre de menus">
         <ToggleRow
+          label="Lancer au démarrage du Mac"
+          hint="L'application démarre sans fenêtre, dans la barre de menus."
+          checked={p.launch_at_login}
+          onChange={(v) => patchPrefs({ launch_at_login: v })}
+        />
+        <ToggleRow
           label="Masquer l'icône du Dock"
           hint="L'icône de la barre de menus reste alors active."
           checked={p.hide_dock}

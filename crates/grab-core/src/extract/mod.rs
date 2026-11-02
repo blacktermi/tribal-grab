@@ -77,7 +77,7 @@ impl Extractor {
         }
         // 6. Rien trouvé
         match ytdlp_err {
-            Error::Unsupported(m) => Ok(Resolved::Unsupported(m)),
+            Error::Unsupported(_) => Ok(Resolved::Unsupported("aucun fichier accessible dans cette page. Si le site exige une connexion, faites un clic droit sur l'image ou la vidéo dans Chrome, puis « Envoyer à Tribal Grab ».".into())),
             Error::ToolMissing(_) => Ok(Resolved::Unsupported("aucun média détecté dans la page (yt-dlp n'est pas installé)".into())),
             e => Err(e),
         }

@@ -15,6 +15,7 @@ Il remplace le téléchargeur de votre navigateur pour **tous les types de fichi
 - **Meilleure qualité** : toujours la plus haute résolution disponible. Ce que QuickTime ne lit pas est converti à la même résolution par l'encodeur matériel du Mac, et l'original reste à côté dans un fichier `.mkv`.
 - **Vidéo et audio** : `yt-dlp`, HLS et DASH natifs, directs, sous-titres, audio seul.
 - **Extraction guidée** : navigateur intégré qui détecte les médias d'une page et permet de se connecter aux sites.
+- **Lancement au démarrage** : en option, l'application démarre sans fenêtre, dans la barre de menus.
 - **Automatisation** : ligne de commande `tribal-grab`, schéma `tribalgrab://add?url=…`, scripts personnalisés, intégrations en JavaScript.
 - **Extension Chromium** : confie les téléchargements de Chrome, Brave, Edge ou Arc à l'application.
 

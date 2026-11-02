@@ -115,7 +115,7 @@ export interface Settings {
 export interface AppPrefs {
   theme: "dark" | "light" | "system";
   density: "comfortable" | "compact";
-  show_thumbnails: boolean; hide_dock: boolean; menubar_icon: boolean; menubar_speed: boolean;
+  show_thumbnails: boolean; hide_dock: boolean; launch_at_login: boolean; menubar_icon: boolean; menubar_speed: boolean;
   sounds: boolean; sound_added: string; sound_finished: string; sound_failed: string;
   sound_queue_finished: string; focus_on_question: boolean; search_in_main: boolean;
 }

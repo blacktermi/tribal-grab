@@ -1,14 +1,38 @@
 //! Intégration macOS : icône de barre de menus, menus natifs, Dock, thème.
 use crate::prefs::AppPrefs;
 use crate::state::AppState;
+use tauri_plugin_autostart::ManagerExt;
 use tauri::menu::{AboutMetadataBuilder, Menu, MenuItem, MenuItemBuilder, PredefinedMenuItem, SubmenuBuilder};
 use tauri::tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent};
 use tauri::{AppHandle, Emitter, Manager, Theme};
 
 pub const TRAY_ID: &str = "tribal-grab-tray";
 
+/// Argument du lancement à l'ouverture de session : l'application démarre sans fenêtre.
+pub const HIDDEN_ARG: &str = "--hidden";
+
+/// L'agent de lancement contient le chemin de l'application : on le réécrit à chaque démarrage, au cas où elle a été déplacée.
+fn apply_login_item(app: &AppHandle, enabled: bool) {
+    // `tauri dev` remplacerait le chemin par celui du binaire de débogage.
+    if cfg!(debug_assertions) {
+        return;
+    }
+    let auto = app.autolaunch();
+    let result = if enabled {
+        auto.enable()
+    } else if auto.is_enabled().unwrap_or(false) {
+        auto.disable()
+    } else {
+        Ok(())
+    };
+    if let Err(e) = result {
+        tracing::warn!("lancement à l'ouverture de session : {e}");
+    }
+}
+
 pub fn apply_prefs(app: &AppHandle, p: &AppPrefs) {
     let _ = app.set_dock_visibility(!p.hide_dock);
+    apply_login_item(app, p.launch_at_login);
     app.set_theme(match p.theme.as_str() {
         "dark" => Some(Theme::Dark),
         "light" => Some(Theme::Light),

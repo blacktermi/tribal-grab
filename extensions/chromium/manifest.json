@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tribal Grab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Confie les téléchargements de Chrome à Tribal Grab (macOS) : plus rapides, avec pause et reprise.",
   "minimum_chrome_version": "110",
   "permissions": ["activeTab", "storage", "contextMenus", "downloads"],

@@ -6,6 +6,17 @@ Toutes les évolutions notables de Tribal Grab sont notées ici. Le format suit
 
 ## [Non publié]
 
+## [0.1.1] - 2026-11-02
+
+### Ajouté
+
+- Lancement à l'ouverture de session, sans fenêtre, dans la barre de menus (réglage désactivé par défaut).
+- Clic droit sur une image dans le navigateur : envoi direct à l'application.
+
+### Modifié
+
+- Message clair quand une page ne contient aucun fichier accessible sans connexion.
+
 ## [0.1.0] - 2026-11-02
 
 Première version publique.
@@ -25,5 +36,6 @@ Première version publique.
 - Application de bureau avec barre de menus, ligne de commande `tribal-grab`, schéma `tribalgrab://`.
 - Extension Chromium qui confie les téléchargements de Chrome à l'application.
 
-[Non publié]: https://github.com/blacktermi/tribal-grab/compare/v0.1.0...HEAD
+[Non publié]: https://github.com/blacktermi/tribal-grab/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/blacktermi/tribal-grab/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/blacktermi/tribal-grab/releases/tag/v0.1.0

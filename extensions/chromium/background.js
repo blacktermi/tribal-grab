@@ -53,7 +53,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: MENU_ID,
     title: "Envoyer à Tribal Grab",
-    contexts: ["link", "page", "video", "audio"],
+    contexts: ["link", "page", "image", "video", "audio"],
   });
 });
 

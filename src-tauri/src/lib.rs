@@ -31,6 +31,7 @@ pub fn run() {
             opener::handle_args(app, &argv);
             windows::show_main(app);
         }))
+        .plugin(tauri_plugin_autostart::init(tauri_plugin_autostart::MacosLauncher::LaunchAgent, Some(vec![mac::HIDDEN_ARG])))
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_notification::init())
         .invoke_handler(tauri::generate_handler![
@@ -76,7 +77,8 @@ pub fn run() {
             mac::apply_prefs(&handle, &p);
             events::spawn(handle.clone(), engine);
             let _ = tauri_plugin_notification::NotificationExt::notification(&handle).request_permission();
-            if std::env::var("TRIBAL_GRAB_HIDDEN").is_err() {
+            let hidden = std::env::var("TRIBAL_GRAB_HIDDEN").is_ok() || std::env::args().any(|a| a == mac::HIDDEN_ARG);
+            if !hidden {
                 windows::show_main(&handle);
             } else {
                 let _ = windows::create_main(&handle);

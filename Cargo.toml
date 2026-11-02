@@ -6,7 +6,7 @@ members = ["crates/grab-core", "crates/grab-cli", "src-tauri"]
 license = "MIT"
 authors = ["Tribal Studio"]
 repository = "https://github.com/blacktermi/tribal-grab"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 
 [profile.release]

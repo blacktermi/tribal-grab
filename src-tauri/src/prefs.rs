@@ -12,6 +12,8 @@ pub struct AppPrefs {
     pub density: String,
     pub show_thumbnails: bool,
     pub hide_dock: bool,
+    /// Lance l'application à l'ouverture de session, sans fenêtre.
+    pub launch_at_login: bool,
     pub menubar_icon: bool,
     pub menubar_speed: bool,
     pub sounds: bool,
@@ -30,6 +32,7 @@ impl Default for AppPrefs {
             density: "comfortable".into(),
             show_thumbnails: true,
             hide_dock: false,
+            launch_at_login: false,
             menubar_icon: true,
             menubar_speed: true,
             sounds: true,
